@@ -1,0 +1,41 @@
+#ifndef Piloto_h
+#define Piloto_h
+#include <iostream>
+#include "Persona.h"
+
+class Piloto:public Persona{
+    public:
+        Piloto();
+        Piloto(int, std::string, std::string); // int licencia, string nombre, string nacionalidad
+        int getNumeroLicencia() const;
+        void setNumeroLicencia(int);
+        void imprime();
+    private:
+        int numeroLicencia;
+};
+
+Piloto::Piloto(){
+    numeroLicencia = 0;
+}
+
+Piloto::Piloto(int nl, std::string name, std::string nat): Persona(name, nat){
+    numeroLicencia = nl;
+}
+
+int Piloto::getNumeroLicencia() const {
+    return numeroLicencia;
+}
+
+void Piloto::setNumeroLicencia(int nl){
+    numeroLicencia = nl;
+}
+
+void Piloto :: imprime(){
+    std::cout << "-.-.-ATRIBUTOS DEL PILOTO-.-.-" << std::endl;
+    std::cout << "Nombre: " << Persona::getNombre() << std::endl;
+    std::cout << "Nacionalidad: " << Persona::getNacionalidad() << std::endl;
+    std::cout << "Numero de licencia: " << getNumeroLicencia() << std:: endl;
+    std::cout << "-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-" << std:: endl;
+}
+
+#endif
