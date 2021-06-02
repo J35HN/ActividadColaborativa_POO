@@ -11,8 +11,8 @@ public:
     Automovil();
     Automovil(std::string, std::string, double, Piloto); // string color, string fabricante, double precio, Piloto piloto;
     ~Automovil();
-    string getColor() const;
-    void setColor(string);
+    std::string getColor() const;
+    void setColor(std::string);
     void imprime();
 };
 

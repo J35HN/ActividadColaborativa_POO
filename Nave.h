@@ -6,10 +6,10 @@
 class Nave{
     public:
         Nave();
-        Nave(string, double, Piloto); // string fabricante, double precio, Piloto piloto;
-        string getFabricante() const;
+        Nave(std::string, double, Piloto); // string fabricante, double precio, Piloto piloto;
+        std::string getFabricante() const;
         double getPrecio() const;
-        void setFabricante(string);
+        void setFabricante(std::string);
         void setPrecio(double);
         void imprime();
     private:
