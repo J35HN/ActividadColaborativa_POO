@@ -5,13 +5,16 @@
 
 class Nave{
     public:
+        // Constructores
         Nave();
         Nave(string, double, Piloto); // string fabricante, double precio, Piloto piloto;
+        // Getters y Setters
         string getFabricante() const;
         double getPrecio() const;
         void setFabricante(std::string);
         void setPrecio(double);
-        void imprime();
+        // Métodos
+        virtual void imprime() = 0; // Hace la clase abstracta
     private:
         std::string fabricante;
         double precio;
@@ -50,8 +53,6 @@ void Nave::imprime(){
     std::cout << "-.-ATRIBUTOS DE NAVE-.-" << std::endl;
     std::cout << "Fabricante: " << getFabricante() << std::endl;
     std::cout << "Precio: " << getPrecio() << std::endl;
-    std::cout << "-..-.-.-.-.-.-.-.-.-.-" << std::endl;
-
 }
 
 #endif

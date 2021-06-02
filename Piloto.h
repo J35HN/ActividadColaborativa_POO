@@ -6,15 +6,17 @@
 
 class Piloto:public Persona{
     public:
+        // Constructores y destructor
         Piloto();
         Piloto(int, std::string, std::string); // int licencia, string nombre, string nacionalidad
+        // Getters y Setters
         int getNumeroLicencia() const;
         void setNumeroLicencia(int);
-        void imprime();
+        // Métodos
+        void imprime() override;
     private:
         int numeroLicencia;
 };
-
 Piloto::Piloto(){
     numeroLicencia = 0;
 }
@@ -33,10 +35,10 @@ void Piloto::setNumeroLicencia(int nl){
 
 void Piloto :: imprime(){
     std::cout << "-.-.-ATRIBUTOS DEL PILOTO-.-.-" << std::endl;
-    std::cout << "Nombre: " << Persona::getNombre() << std::endl;
-    std::cout << "Nacionalidad: " << Persona::getNacionalidad() << std::endl;
-    std::cout << "Numero de licencia: " << getNumeroLicencia() << std:: endl;
-    std::cout << "-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-" << std:: endl;
+    Persona::imprime();
+    //std::cout << "Nombre: " << Persona::getNombre() << std::endl;
+    //std::cout << "Nacionalidad: " << Persona::getNacionalidad() << std::endl;
+    //std::cout << "Numero de licencia: " << getNumeroLicencia() << std:: endl;
 }
 
 #endif

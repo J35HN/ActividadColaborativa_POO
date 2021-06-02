@@ -8,12 +8,15 @@ class Barco: public Nave
 private:
     float largo;
 public:
+    // Constructores
     Barco();
     Barco(float, std::string, double, Piloto); // float Largo, string fabricante, double precio, Piloto piloto;
-    ~Barco();
+    
+    // Getters y Setters
     float getLargo() const;
     void setLargo(float);
-    void imprime();
+    // Métodos
+    void imprime() override;
 };
 
 Barco::Barco(){
@@ -23,8 +26,6 @@ Barco::Barco(){
 Barco::Barco(float l, std::string fab, double pr, Piloto pl):Nave(fab, pr, pl){
     largo = l;
 }
-
-Barco::~Barco(){}
 
 float Barco::getLargo() const {
     return largo;
@@ -38,7 +39,7 @@ void Barco::imprime(){
     Nave::imprime();
     std::cout << "-.-ATRIBUTOS BARCO-.-" << std::endl;
     std::cout << "Largo: " << getLargo() << std::endl;
-    std::cout << "-.-.-.-.-.-.-.-.-.-.-" << std::endl;
+    std::cout << "-.-.-.-.-.-.-.-.-.-.-" << std::endl << std::endl;
 }
 
 #endif

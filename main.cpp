@@ -25,7 +25,8 @@ using namespace std;
 #include "Barco.h"
 #include "Avion.h"
 
-
+// Función que carga los datos del archivo "entrada.txt",
+// Regresa la cantidad de naves creadas.
 int cargaDatos(Nave* arr[]){
     ifstream archivo;
     string tipoNave, fabricante, nombre, nacionalidad, color, temp;
@@ -69,11 +70,24 @@ int cargaDatos(Nave* arr[]){
 
 int main()
 {
+    // Declaramos nuestro arreglo de objetos Nave
     Nave* arregloNaves[10];
     int numDatos = cargaDatos(arregloNaves);
     
+    // Iteramos nuestro arreglo para imprimir nuestros datos de la nave.
     for(int i=0; i<numDatos; i++){
-        arregloNaves[i] -> imprime();
+        // Dynamic cast, para llamar al método imprime adecuado, y no la de Nave::imprime().
+        if(Avion* c=dynamic_cast<Avion*>(arregloNaves[i])){
+            c -> imprime();
+        }
+        if(Barco* c=dynamic_cast<Barco*>(arregloNaves[i])){
+            c -> imprime();
+        }
+        if(Automovil* c=dynamic_cast<Automovil*>(arregloNaves[i])){
+            c -> imprime();
+        }
+        
+        //arregloNaves[i] -> imprime();
     }
     
     return 0;
