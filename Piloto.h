@@ -1,6 +1,7 @@
 #ifndef Piloto_h
 #define Piloto_h
 #include <iostream>
+
 #include "Persona.h"
 
 class Piloto:public Persona{

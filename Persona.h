@@ -16,7 +16,7 @@ public:
 
     // Getters y Setters
     std::string getNombre() const;
-    std::strign getNacionalidad() const;
+    std::string getNacionalidad() const;
     void setNombre(std::string);
     void setNacionalidad(std::string);
 

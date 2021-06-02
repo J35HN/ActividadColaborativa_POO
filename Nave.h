@@ -6,47 +6,47 @@
 class Nave{
     public:
         Nave();
-        Nave(string, double, Piloto); // string fabricante, double precio, Piloto piloto;
-        string getFabricante() const;
+        Nave(std::string, double, Piloto); // std::string fabricante, double precio, Piloto piloto;
+        std::string getFabricante() const;
         double getPrecio() const;
-        void setFabricante(string);
+        void setFabricante(std::string);
         void setPrecio(double);
         void imprime();
     private:
-        string fabricante;
+        std::string fabricante;
         double precio;
         Piloto piloto;
 };
 
 Nave::Nave(){
-    string fabricante = "-";
+    std::string fabricante = "-";
     double precio = 0;
 }
 
-Nave::Nave(string f, double pr, Piloto pl){
+Nave::Nave(std::string f, double pr, Piloto pl){
     fabricante = f;
     precio = pr;
     piloto = pl;
 }
 
-int Nave::getFabricante() const {
+std::string Nave::getFabricante() const {
     return fabricante;
 }
 
-int Nave::getPrecio() const {
+double Nave::getPrecio() const {
     return precio;
 }
 
-void Nave::setFabricante(int f){
+void Nave::setFabricante(std::string f){
     fabricante = f;
 }
 
-void Nave::setLicencia(int pr){
+void Nave::setPrecio(double pr){
     precio = pr;
 }
 
 void Nave::imprime(){
-    Piloto::imprime();
+    piloto.imprime();
     std::cout << "-.-ATRIBUTOS DE NAVE-.-" << std::endl;
     std::cout << "Fabricante: " << getFabricante() << std::endl;
     std::cout << "Precio: " << getPrecio() << std::endl;

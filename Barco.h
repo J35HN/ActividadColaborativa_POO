@@ -17,21 +17,21 @@ public:
 };
 
 Barco::Barco(){
-    Largo = "-";
+    largo = 0;
 }
 
 Barco::Barco(float l, std::string fab, double pr, Piloto pl):Nave(fab, pr, pl){
-    Largo = l;
+    largo = l;
 }
 
 Barco::~Barco(){}
 
 float Barco::getLargo() const {
-    return Largo;
+    return largo;
 }
 
 void Barco::setLargo(float l){
-    Largo = l;
+    largo = l;
 }
 
 void Barco::imprime(){

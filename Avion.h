@@ -17,7 +17,7 @@ public:
 };
 
 Avion::Avion(){
-    alturaMaxima = "-";
+    alturaMaxima = 0;
 }
 
 Avion::Avion(double a, std::string fab, double pr, Piloto pl):Nave(fab, pr, pl){
