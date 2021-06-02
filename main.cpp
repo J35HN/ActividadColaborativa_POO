@@ -87,8 +87,11 @@ int main()
             c -> imprime();
         }
         
-        //arregloNaves[i] -> imprime();
     }
-    
+    // Pruebas de instancia. No se pudo instanciar ninguno porque las dos clases son abstractas.
+    // Persona laMejorMaestra("Fabiola P.", "JAP");
+    // Piloto pilota_Anoescierto_Piloto(42069, laMejorMaestra.getNombre(), laMejorMaestra.getNacionalidad());
+    // Nave cinepolis("SONY", 42069,pilota_Anoescierto_Piloto);
+    // cinepolis.imprime();
     return 0;
 }
